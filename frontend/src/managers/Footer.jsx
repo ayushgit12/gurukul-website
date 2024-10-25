@@ -5,13 +5,13 @@ import onlylogo from "../assets/onlylogo2.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white py-12">
+    <footer className="bg-blue-600 text-white pt-12 py-6">
       <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
         <div className="flex flex-wrap justify-between space-y-8 lg:space-y-0">
           
           {/* About Section */}
           <div className="w-full lg:w-1/3">
-            <h2 className="text-2xl font-semibold mb-4">Gurukul Research Foundation</h2>
+            <h2 className="text-2xl font-bold mb-4">Gurukul Research Foundation</h2>
             <p className="text-white text-sm">
              <img src={onlylogo} alt="logo" className="h-32" />
             </p>
@@ -33,8 +33,8 @@ const Footer = () => {
           {/* Contact Information */}
           <div className="w-full lg:w-1/3">
             <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
-            <p className="text-white text-sm mb-2">Phone: +1 (555) 123-4567</p>
-            <p className="text-white text-sm mb-4">Email: info@gurukulresearch.com</p>
+            <p className="text-white text-lg mb-2">Phone: +1 (555) 123-4567</p>
+            <p className="text-white text-lg mb-4">Email: info@gurukulresearch.com</p>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-300">
                 <FaLinkedin size={20} />
@@ -54,7 +54,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="mt-8 border-t border-blue-300 pt-6 text-center text-white text-sm">
-          <p>© {new Date().getFullYear()} Gurukul Research Foundation. All rights reserved.</p>
+          <p>©2024 Gurukul Research Foundation. All rights reserved.</p>
         </div>
       </div>
     </footer>
