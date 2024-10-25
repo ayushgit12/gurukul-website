@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import {toast, Toaster} from 'react-hot-toast';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -22,31 +23,32 @@ const ContactUs = () => {
     // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', 'YOUR_USER_ID' // rajul sir ki id sa account ban diyo  an cred bhar diyo
     emailjs
       .send(
-        "servuice one",
-        " template id",
+        "service_m235oho",
+        "template_f1fe07h",
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "public key"
+        "Qu7iB6JQrNOS7iRFr"
       )
 
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
-          alert("Message sent successfully!");
+          toast.success("Message sent successfully!");
           setFormData({ name: "", email: "", message: "" }); // Clear form after submission
         },
         (err) => {
           console.log("FAILED...", err);
-          alert("Failed to send message. Please try again.");
+          toast.error("Failed to send message. Please try again.");
         }
       );
   };
 
   return (
-    <section className="bg-white">
+    <section className="bg-gray-50">
+      <Toaster />
       <div className="container px-6 py-12 mx-auto">
         <div>
           <h1 className="mt-2 text-2xl font-semibold md:text-3xl">
@@ -82,7 +84,7 @@ const ContactUs = () => {
               <h2 className="mt-4 text-3xl">Email</h2>
               <p className="mt-2 text-xl">Our friendly team is here to help.</p>
               <p className="mt-2 text-xl text-blue-600">
-                info@gurukulresearch.com
+                rajuldwivedi@gurukulres.com
               </p>
             </div>
             <div>
@@ -104,7 +106,7 @@ const ContactUs = () => {
               </span>
               <h2 className="mt-4 text-3xl">Phone</h2>
               <p className="mt-2 text-lg">Mon-Sun from 8am to 5pm.</p>
-              <p className="mt-2 text-lg text-blue-600">+1 (555) 123-4567</p>
+              <p className="mt-2 text-lg text-blue-600">+91 77729 69347</p>
             </div>
           </div>
 

@@ -28,7 +28,7 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
-    <div className="bg-white min-h-screen p-8">
+    <div className="bg-gray-50 min-h-screen p-8">
       <header className="text-center mb-12">
         <h1 className="text-4xl font-bold text-blue-600 mb-4">Our Team</h1>
         <p className="text-black text-lg">

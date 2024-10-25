@@ -17,7 +17,7 @@ const About = () => {
       </h1>
       <div className={`py-6 border-l-4 border-blue-600 bg-white rounded-lg shadow-lg mb-6 hover:shadow-xl transition-shadow duration-300 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
         <h2 className="text-3xl font-semibold text-blue-600 flex items-center mb-4">
-          <FontAwesomeIcon icon={faRocket} className="mr-2" />
+          <FontAwesomeIcon icon={faRocket} className="mx-6" />
           Our Mission
         </h2>
         <p className="text-xl md:px-16 mb-6 tracking-wide	">
@@ -30,7 +30,7 @@ const About = () => {
 
       <div className={`py-6 border-l-4 border-blue-600 bg-white rounded-lg shadow-lg mb-6 hover:shadow-xl transition-shadow duration-300 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
         <h2 className="text-3xl font-semibold text-blue-600 flex items-center mb-4">
-          <FontAwesomeIcon icon={faEye} className="mr-2" />
+          <FontAwesomeIcon icon={faEye} className="mx-6" />
           Our Vision
         </h2>
         <p className="text-xl md:px-16 mb-8 tracking-wide	">
@@ -43,7 +43,7 @@ const About = () => {
 
       <div className={`py-6 border-l-4 border-blue-600 bg-white rounded-lg shadow-lg mb-6 hover:shadow-xl transition-shadow duration-300 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
         <h2 className="text-3xl font-semibold text-blue-600 flex items-center mb-4">
-          <FontAwesomeIcon icon={faHandshake} className="mr-2" />
+          <FontAwesomeIcon icon={faHandshake} className="mx-6" />
           Our Values
         </h2>
         <p className="text-xl md:px-16 mb-6 tracking-wide	">
