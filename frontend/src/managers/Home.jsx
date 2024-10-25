@@ -33,16 +33,16 @@ const Home = () => {
         <h2 className="text-3xl font-semibold text-blue-800 py-4 bg-blue-50 md:px-16">
           Our Expertise
         </h2>
-        <div className="flex flex-wrap items-center md:px-8 w-screen justify-around bg-blue-50">
-  <img src={build} className="w-96 p-4" alt="" />
-  <p className="w-1/2 text-3xl break-words mb-8 p-4">
+        <div className="flex flex-wrap items-center md:px-8 justify-around bg-blue-50">
+  <img src={build} className="md:w-96 w-60 p-4" alt="" />
+  <p className="md:w-1/2 md:text-3xl text-2xl break-words mb-8 p-4">
     With a dedicated team of specialists, we ensure seamless project execution, 
     delivering high-quality results that exceed expectations.
   </p>
 </div>
 
 
-        <h2 className="text-3xl font-semibold text-blue-800 mb-4 md:px-16">
+        <h2 className="text-3xl font-semibold text-blue-800 mb-4 md:px-16 mt-4">
           Our Approach
         </h2>
         <p className="text-lg mb-8 md:px-16">

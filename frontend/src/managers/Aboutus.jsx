@@ -23,11 +23,11 @@ const AboutUs = () => {
 
   return (
     <div className="py-10 px-5">
-      <h1 className="text-4xl font-bold text-blue-800 text-center mb-6 scroll-fade-up">
+      <h1 className="text-4xl font-bold text-blue-800 text-center mb-6 ">
         About Gurukul Research Foundation
       </h1>
 
-      <p className="text-lg text-center mb-8 scroll-fade-up md:mx-16">
+      <p className="text-lg text-center mb-8 md:mx-16">
         Gurukul Research Foundation is dedicated to advancing technology and education
         through innovative solutions and cutting-edge research. Our goal is to empower
         businesses and individuals by offering personalized services in web development,

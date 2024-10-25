@@ -1,33 +1,39 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { FiMail, FiPhone } from "react-icons/fi";
 
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // Get the current route path
+
+  // Function to determine if a tab is active
+  const isActive = (path) => location.pathname === path;
 
   return (
     <header className="bg-white shadow-lg w-full">
       <div className="container mx-auto px-4 py-4 justify-between items-center">
+        
         {/* Logo and Site Title */}
         <div className="flex justify-between items-center">
-        <div className="flex items-center space-x-4">
-          <img
-            src={logo}
-            alt="Logo"
-          //   className="w-12"
-          />
-
-        </div>
-        <div className="hidden md:flex flex-col text-right">
-          <p className="text-md flex items-center">
-            <FiMail className="mr-2 text-blue-600" /> {/* Email Icon */}
-            Email: rajuldwivedi@gurukulres.com
-          </p>
-          <p className="text-md flex items-center">
-            <FiPhone className="mr-2 text-blue-600" /> {/* Phone Icon */}
-            Phone: +91 77729 69347
-          </p>
-        </div>
+          <div className="flex items-center space-x-4">
+            <img
+              src={logo}
+              alt="Logo"
+              className=""
+            />
+          </div>
+          <div className="hidden md:flex flex-col text-right">
+            <p className="text-md flex items-center">
+              <FiMail className="mr-2 text-blue-600" /> {/* Email Icon */}
+              Email: rajuldwivedi@gurukulres.com
+            </p>
+            <p className="text-md flex items-center">
+              <FiPhone className="mr-2 text-blue-600" /> {/* Phone Icon */}
+              Phone: +91 77729 69347
+            </p>
+          </div>
         </div>
 
         {/* Hamburger Icon for Mobile */}
@@ -59,63 +65,55 @@ const NavBar = () => {
             isOpen ? "block" : "hidden"
           } md:flex md:items-center space-x-6 mt-8`}
         >
-          <a
-            href="/"
-            className="text-black font-semibold hover:text-blue-600 hover:border-b-2 hover:border-blue-600 transition-all duration-300"
+          <Link
+            to="/"
+            className={`text-black font-semibold hover:text-blue-600 transition-all duration-300 ${
+              isActive("/") ? "text-blue-600 border-b-2 border-blue-600" : ""
+            }`}
           >
             HOME
-          </a>
-          <a
-            href="/aboutus"
-            className="text-black font-semibold hover:text-blue-600 hover:border-b-2 hover:border-blue-600 transition-all duration-300"
+          </Link>
+          <Link
+            to="/aboutus"
+            className={`text-black font-semibold hover:text-blue-600 transition-all duration-300 ${
+              isActive("/aboutus") ? "text-blue-600 border-b-2 border-blue-600" : ""
+            }`}
           >
             ABOUT US
-          </a>
-          <a
-            href="/services"
-            className="text-black font-semibold hover:text-blue-600 hover:border-b-2 hover:border-blue-600 transition-all duration-300"
+          </Link>
+          <Link
+            to="/services"
+            className={`text-black font-semibold hover:text-blue-600 transition-all duration-300 ${
+              isActive("/services") ? "text-blue-600 border-b-2 border-blue-600" : ""
+            }`}
           >
             SERVICES
-          </a>
-          <a
-            href="/team"
-            className="text-black font-semibold hover:text-blue-600 hover:border-b-2 hover:border-blue-600 transition-all duration-300"
+          </Link>
+          <Link
+            to="/team"
+            className={`text-black font-semibold hover:text-blue-600 transition-all duration-300 ${
+              isActive("/team") ? "text-blue-600 border-b-2 border-blue-600" : ""
+            }`}
           >
             OUR TEAM
-          </a>
-          <a
-            href="/projects"
-            className="text-black font-semibold hover:text-blue-600 hover:border-b-2 hover:border-blue-600 transition-all duration-300"
+          </Link>
+          <Link
+            to="/projects"
+            className={`text-black font-semibold hover:text-blue-600 transition-all duration-300 ${
+              isActive("/projects") ? "text-blue-600 border-b-2 border-blue-600" : ""
+            }`}
           >
             KEY PROJECTS
-          </a>
-          <a
-            href="/clients"
-            className="text-black font-semibold hover:text-blue-600 hover:border-b-2 hover:border-blue-600 transition-all duration-300"
-          >
-            CLIENTELE
-          </a>
-          <a
-            href="/careers"
-            className="text-black font-semibold hover:text-blue-600 hover:border-b-2 hover:border-blue-600 transition-all duration-300"
-          >
-            CAREERS
-          </a>
-          <a
-            href="/training"
-            className="text-black font-semibold hover:text-blue-600 hover:border-b-2 hover:border-blue-600 transition-all duration-300"
-          >
-            TRAINING
-          </a>
-          <a
-            href="/contact"
-            className="text-black font-semibold hover:text-blue-600 hover:border-b-2 hover:border-blue-600 transition-all duration-300"
+          </Link>
+          <Link
+            to="/contact"
+            className={`text-black font-semibold hover:text-blue-600 transition-all duration-300 ${
+              isActive("/contact") ? "text-blue-600 border-b-2 border-blue-600" : ""
+            }`}
           >
             CONTACT US
-          </a>
+          </Link>
         </nav>
-
-        {/* Contact Information */}
       </div>
 
       {/* Mobile version contact details */}
