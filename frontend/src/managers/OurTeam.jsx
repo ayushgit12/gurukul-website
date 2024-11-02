@@ -1,27 +1,32 @@
 import React from 'react';
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa'; // Import icons from react-icons
-
+import siddharth from  "../assets/siddharth.jpg"
+import ayush from  "../assets/ayush.png"
+import rajul from "../assets/dp.jpeg"
 const teamMembers = [
   {
     name: 'Rajul Dwivedi',
-    title: 'Title',
-    photoUrl: 'https://via.placeholder.com/150',
-    linkedin: 'https://www.linkedin.com/in/johndoe',
+    title: 'Manager',
+    photoUrl: rajul,
     email: 'rajuldwivedi@gurukulres.com',
   },
   {
     name: 'Ayush Raj Baranwal',
     title: 'Web Developer',
-    photoUrl: 'https://via.placeholder.com/150',
-    linkedin: 'https://www.linkedin.com/in/janesmith',
-    email: 'recovery12032005@gmail.com',
+    photoUrl: ayush,
+    email: 'ayushrbaranwal@gmail.com',
   },
   {
     name: 'Siddharth Aggarwal',
-    title: 'Web Developer',
-    photoUrl: 'https://via.placeholder.com/150',
-    linkedin: 'https://www.linkedin.com/in/alicejohnson',
-    email: 'abcd@gmail.com',
+    title: ' Developer',
+    photoUrl: siddharth,
+    email: 'aggarwalsiddharth49@gmail.com',
+  },
+  {
+    name: 'Sujal Kumar ',
+    title: ' Developer',
+    photoUrl: "",
+    email: 'aggarwalsiddharth49@gmail.com',
   },
   // Add more team members as needed
 ];
@@ -43,9 +48,7 @@ const OurTeam = () => {
             <h2 className="text-2xl font-semibold text-blue-600 mb-1">{member.name}</h2>
             <p className="text-black mb-4">{member.title}</p>
             <div className="flex justify-center gap-6 text-blue-600">
-              <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-700">
-                <FaLinkedin size={24} />
-              </a>
+  
               <a href={`mailto:${member.email}`} className="hover:text-blue-700">
                 <FaEnvelope size={24} />
               </a>

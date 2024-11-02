@@ -24,7 +24,7 @@ const Footer = () => {
               <li><Link to="/" className="hover:underline">Home</Link></li>
               <li><Link to="/aboutus" className="hover:underline">About Us</Link></li>
               <li><Link to="/services" className="hover:underline">Services</Link></li>
-              {/* <li><Link to="/team" className="hover:underline">Our Team</Link></li> */}
+              <li><Link to="/team" className="hover:underline">Our Team</Link></li>
               <li><Link to="/projects" className="hover:underline">Projects</Link></li>
               <li><Link to="/contact" className="hover:underline">Contact Us</Link></li>
             </ul>
@@ -33,8 +33,8 @@ const Footer = () => {
           {/* Contact Information */}
           <div className="w-full lg:w-1/3">
             <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
-            <p className="text-white text-lg mb-2">Phone: +1 (555) 123-4567</p>
-            <p className="text-white text-lg mb-4">Email: info@gurukulresearch.com</p>
+            <p className="text-white text-lg mb-2">Phone: +91 77729 69347</p>
+            <p className="text-white text-lg mb-4">Email: rajuldwivedi@gurukulres.com</p>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-300">
                 <FaLinkedin size={20} />

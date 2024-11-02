@@ -89,14 +89,14 @@ const NavBar = () => {
           >
             SERVICES
           </Link>
-          {/* <Link
+          <Link
             to="/team"
             className={`text-black font-semibold hover:text-blue-600 transition-all duration-300 ${
               isActive("/team") ? "text-blue-600 border-b-2 border-blue-600" : ""
             }`}
           >
             OUR TEAM
-          </Link> */}
+          </Link>
           <Link
             to="/projects"
             className={`text-black font-semibold hover:text-blue-600 transition-all duration-300 ${
