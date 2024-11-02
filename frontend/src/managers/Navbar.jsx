@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { FiMail, FiPhone } from "react-icons/fi";
 
-
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation(); // Get the current route path
@@ -18,11 +17,7 @@ const NavBar = () => {
         {/* Logo and Site Title */}
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <img
-              src={logo}
-              alt="Logo"
-              className=""
-            />
+            <img src={logo} alt="Logo" className="" />
           </div>
           <div className="hidden md:flex flex-col text-right">
             <p className="text-md flex items-center">
@@ -61,9 +56,9 @@ const NavBar = () => {
 
         {/* Navbar Links */}
         <nav
-          className={`${
-            isOpen ? "block" : "hidden"
-          } md:flex md:items-center space-x-6 mt-8`}
+          className={`transition-all duration-500 ease-in-out ${
+            isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+          } md:flex md:items-center space-x-6 overflow-hidden`}
         >
           <Link
             to="/"
